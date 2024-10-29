@@ -72,7 +72,7 @@ function App() {
       <div className={clsx(styles.content, styles.section)}>
         <ErrorMessage isError={error} />
         <ImageGallery images={items} openModal={openModal} />
-        <Loader isLoading={loading} />
+        {loading && <Loader />}
         <LoadMoreBtn
           isVisible={hasMorePages && !loading}
           onClick={handleMore}

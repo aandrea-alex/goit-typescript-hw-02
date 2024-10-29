@@ -2,7 +2,12 @@ import React from 'react';
 import CustomButton from '../CustomButton/CustomButton';
 import { MOREBTN_CAPTION } from '../../notifications/constants';
 
-const LoadMoreBtn = ({ isVisible, onClick }) => {
+interface LoadMoreBtnProps {
+  isVisible: boolean; 
+  onClick: () => void; 
+}
+
+const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ isVisible, onClick }) => {
   return (
     <React.Fragment>
       {isVisible && (
