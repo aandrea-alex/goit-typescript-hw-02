@@ -1,18 +1,20 @@
+import React from 'react';
+import { ImageGalleryProps } from './ImageGallery.types';
 import { ImageCard } from './ImageCard';
-
 import styles from './ImageGallery.module.css';
 
-const ImageGallery = ({ images, openModal }) => {
-  const handleImageClick = event => {
-    const clickedCard = event.target.closest('li');
+const ImageGallery: React.FC<ImageGalleryProps> = ({ images, openModal }) => {
+  const handleImageClick = (event: React.MouseEvent<HTMLUListElement>) => {
+    const clickedCard = (event.target as HTMLElement).closest('li');
     if (clickedCard) {
-      const imageId = clickedCard.dataset.imageid;
+      const imageId = clickedCard.getAttribute('data-imageid');
       const clickedImageObj = images.find(image => image.id === imageId);
       if (clickedImageObj) {
         openModal(clickedImageObj);
       }
     }
   };
+
   return (
     <>
       {images.length > 0 && (
