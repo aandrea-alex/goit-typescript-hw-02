@@ -1,13 +1,13 @@
-import SearchBar from './SearchBar/SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 import styles from './App.module.css';
 import { useState, useEffect } from 'react';
 import Modal from 'react-modal';
-import { fetchData } from '../api/fetchData';
-import ErrorMessage from './ErrorMessage/ErrorMessage';
-import ImageGallery from './ImageGallery/ImageGallery';
-import Loader from './Loader/Loader';
-import LoadMoreBtn from './LoadMoreBtn/LoadMoreBtn';
-import ImageModal from './ImageModal/ImageModal';
+import { fetchData } from '../../api/fetchData';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import ImageGallery from '../ImageGallery/ImageGallery';
+import Loader from '../Loader/Loader';
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
+import ImageModal from '../ImageModal/ImageModal';
 import clsx from 'clsx';
 
 function App() {
