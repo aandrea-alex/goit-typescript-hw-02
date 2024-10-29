@@ -1,4 +1,3 @@
 export interface ErrorMessageProps {
-    isError: boolean;
-  }
-  
+  isError: boolean;
+}

@@ -4,7 +4,11 @@ import { RxExit } from 'react-icons/rx';
 import { ImageModalProps } from './ImageModal.types';
 import styles from './ImageModal.module.css';
 
-const ImageModal: React.FC<ImageModalProps> = ({ isOpen, image, onCloseClick }) => {
+const ImageModal: React.FC<ImageModalProps> = ({
+  isOpen,
+  image,
+  onCloseClick,
+}) => {
   return (
     <React.Fragment>
       <Modal

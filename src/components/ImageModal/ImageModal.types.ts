@@ -1,4 +1,4 @@
-import { Image } from "../../api/image.types";
+import { Image } from '../../api/image.types';
 
 interface ImageModalProps {
   isOpen: boolean;
@@ -6,4 +6,4 @@ interface ImageModalProps {
   onCloseClick: () => void;
 }
 
-export type {ImageModalProps}
+export type { ImageModalProps };

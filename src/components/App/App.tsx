@@ -12,15 +12,15 @@ import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ImageModal from '../ImageModal/ImageModal';
 
 function App() {
-  const [items, setItems] = useState<Image[]>([]); 
-  const [loading, setLoading] = useState<boolean>(false); 
-  const [error, setError] = useState<boolean>(false); 
-  const [currPage, setCurrPage] = useState<number>(0); 
-  const [hasMorePages, setHasMorePages] = useState<boolean>(false); 
-  const [filter, setFilter] = useState<string>(''); 
+  const [items, setItems] = useState<Image[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  const [currPage, setCurrPage] = useState<number>(0);
+  const [hasMorePages, setHasMorePages] = useState<boolean>(false);
+  const [filter, setFilter] = useState<string>('');
 
-  const [selectedImage, setSelectedImage] = useState<Image | null>(null); 
-  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false); 
+  const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     Modal.setAppElement('#rootModal');
@@ -34,7 +34,7 @@ function App() {
       if (data && data.results.length > 0) {
         setItems(prevItems => [...prevItems, ...data.results]);
         setCurrPage(page);
-        setHasMorePages(page < data.total_pages); 
+        setHasMorePages(page < data.total_pages);
       } else {
         setError(true);
         setHasMorePages(false);

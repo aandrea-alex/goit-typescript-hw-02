@@ -2,7 +2,9 @@ import React from 'react';
 import { ImageCardProps } from './ImageCard.types';
 import styles from './ImageCard.module.css';
 
-export const ImageCard: React.FC<ImageCardProps> = ({ image: { urls, description } }) => {
+export const ImageCard: React.FC<ImageCardProps> = ({
+  image: { urls, description },
+}) => {
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>

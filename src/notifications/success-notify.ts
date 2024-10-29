@@ -5,4 +5,3 @@ export const okNotify = (msg: string): void => {
     duration: 700,
   });
 };
-
