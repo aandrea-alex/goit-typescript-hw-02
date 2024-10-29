@@ -1,14 +1,15 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { RxExit } from 'react-icons/rx';
+import { ImageModalProps } from './ImageModal.types';
 import styles from './ImageModal.module.css';
 
-const ImageModal = ({ isOpen, image, onCloseClick }) => {
+const ImageModal: React.FC<ImageModalProps> = ({ isOpen, image, onCloseClick }) => {
   return (
     <React.Fragment>
       <Modal
         isOpen={isOpen}
-        onRequestClose={onCloseClick}       
+        onRequestClose={onCloseClick}
         overlayClassName={styles.backdrop}
         className={styles.modal}
         shouldCloseOnOverlayClick={true}
@@ -27,7 +28,7 @@ const ImageModal = ({ isOpen, image, onCloseClick }) => {
                 />
               </div>
               <p className={styles.text}>Author: {image.user.username}</p>
-              <p className={styles.text}>Likes: {image.likes} </p>
+              <p className={styles.text}>Likes: {image.likes}</p>
             </>
           )}
         </div>

@@ -1,4 +1,4 @@
-import { Image } from './ImageCard.types';
+import { Image } from '../../api/image.types';
 
 export interface ImageGalleryProps {
   images: Image[];
